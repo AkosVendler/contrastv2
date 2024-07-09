@@ -1,20 +1,38 @@
 {
+  "homepage": "https://akosvendler.github.io/contrastv2",
   "name": "amdesign",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+},
+
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.4"
+    "@gsap/react": "^2.1.1",
+    "gsap": "^3.12.5",
+    "gsap-trial": "^3.12.5",
+    "i18next": "^23.11.5",
+    "i18next-resources-to-backend": "^1.2.1",
+    "next": "^14.2.4",
+    "next-i18n-router": "^5.5.0",
+    "next-intl": "^3.15.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^14.1.2",
+    "split-type": "^0.3.4"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "autoprefixer": "^10.4.19",
+    "gh-pages": "^6.1.1",
+    "ghpages": "^0.0.10",
+    "i18nexus-cli": "^3.4.0",
+    "postcss": "^8.4.39",
+    "react-router-dom": "^6.23.1",
+    "tailwindcss": "^3.4.4"
   }
 }

@@ -7,10 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens : {
+        'mm': '375px',
+        'smm': '320px',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      fontFamily: {
+        clash: ["var(--font-display)"],
+      },
+      cursor: {
+        zoom: 'url(/zoom-cursor.png), zoom-in',
       },
     },
   },

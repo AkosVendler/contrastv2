@@ -1,6 +1,8 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -18,12 +20,10 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #FFFCF2;
+  /*font-family: 'Satoshi', sans-serif;*/
+  font-family: var(--font-display);
+  overflow: hidden;                                 
 }
 
 @layer utilities {
@@ -31,3 +31,49 @@ body {
     text-wrap: balance;
   }
 }
+
+.char {
+  transform: translateY(115px);
+  transition: transform .5s;
+}
+
+#my-text {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+}
+
+
+#nav {
+  visibility:hidden;
+}
+
+#container {
+  visibility:hidden;
+}
+
+#right-side {
+  visibility:hidden;
+}
+
+#menu{
+  animation: smooth-appear 1s ease forwards;
+}
+
+@keyframes smooth-appear {
+  from {
+    bottom: 30px;
+  }
+  to{
+    bottom: 112px;
+    opacity:1;
+  }
+}
+
+#active {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #EB5E28;
+}
+
+
