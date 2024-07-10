@@ -1,0 +1,79 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #FFFCF2;
+  /*font-family: 'Satoshi', sans-serif;*/
+  font-family: var(--font-display);
+  overflow: hidden;                                 
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.char {
+  transform: translateY(115px);
+  transition: transform .5s;
+}
+
+#my-text {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+}
+
+
+#nav {
+  visibility:hidden;
+}
+
+#container {
+  visibility:hidden;
+}
+
+#right-side {
+  visibility:hidden;
+}
+
+#menu{
+  animation: smooth-appear 1s ease forwards;
+}
+
+@keyframes smooth-appear {
+  from {
+    bottom: 30px;
+  }
+  to{
+    bottom: 112px;
+    opacity:1;
+  }
+}
+
+#active {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #EB5E28;
+}
+
+
